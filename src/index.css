@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+}
+
+/* DatePicker Custom Styles */
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker {
+  @apply font-sans border border-gray-200 rounded-lg shadow-lg;
+}
+
+.react-datepicker__header {
+  @apply bg-gray-50 border-b border-gray-200;
+}
+
+.react-datepicker__current-month {
+  @apply text-gray-900 font-semibold;
+}
+
+.react-datepicker__day-name {
+  @apply text-gray-600;
+}
+
+.react-datepicker__day {
+  @apply text-gray-900 hover:bg-blue-50;
+}
+
+.react-datepicker__day--selected {
+  @apply bg-blue-600 text-white hover:bg-blue-700;
+}
+
+.react-datepicker__day--disabled {
+  @apply text-gray-400 hover:bg-transparent cursor-not-allowed;
+}
+
+/* Select Custom Styles */
+.select__control {
+  @apply border border-gray-300 rounded-md shadow-sm;
+}
+
+.select__control--is-focused {
+  @apply border-blue-500 ring-1 ring-blue-500;
+}
+
+.select__menu {
+  @apply mt-1 border border-gray-200 rounded-md shadow-lg bg-white z-50;
+}
+
+.select__option {
+  @apply px-3 py-2 text-sm text-gray-900 hover:bg-blue-50 cursor-pointer;
+}
+
+.select__option--is-selected {
+  @apply bg-blue-600 text-white hover:bg-blue-700;
+}
+
+/* Toast Custom Styles */
+.Toastify__toast {
+  @apply rounded-lg shadow-lg;
+}
+
+.Toastify__toast--success {
+  @apply bg-green-600;
+}
+
+.Toastify__toast--error {
+  @apply bg-red-600;
+}
+
+.Toastify__toast--info {
+  @apply bg-blue-600;
+}
+
+.Toastify__toast--warning {
+  @apply bg-yellow-600;
+}
+
+/* Loading Animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Focus Styles */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500;
+}
+
+/* Button Hover Effects */
+.hover-lift {
+  @apply transform transition-transform duration-200 hover:-translate-y-0.5;
+}
+
+/* Card Hover Effects */
+.hover-shadow {
+  @apply transition-shadow duration-200 hover:shadow-lg;
+}

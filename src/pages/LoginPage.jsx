@@ -1,5 +1,18 @@
-function LoginPage() {
-  return <div>LoginPage works!</div>
-}
+import React, { useState } from 'react';
+import LoginPopup from './LoginPopup';
 
-export default LoginPage
+const LoginPage = () => {
+  const [isLoginPopupOpen, setIsLoginPopupOpen] = useState(true);
+
+  const handleCloseLoginPopup = () => {
+    setIsLoginPopupOpen(false);
+  };
+
+  return (
+    <div>
+      <LoginPopup isOpen={isLoginPopupOpen} onClose={handleCloseLoginPopup} />
+    </div>
+  );
+};
+
+export default LoginPage;
